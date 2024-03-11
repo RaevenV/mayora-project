@@ -1,0 +1,32 @@
+.next-button-container {
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next-text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #b9b9b9;
+}
+
+.next-button-wrapper {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  width: 130px;
+  border-radius: 8px;
+  border: 3px #b9b9b9 solid;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.next-button-wrapper:hover .next-text {
+  color: #f9f9f9;
+}
+
+.next-button-wrapper:hover {
+  background-color: #b9b9b9;
+}

@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+}
+
+:root {
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-wrapper {
+  padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-wrapper {
+  display: flex;
+  margin-top: 50px;
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.login-header {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.link1{
+    text-decoration: none;
+    color: #1C1C1C;
+    width: fit-content;
+    height: fit-content;
+}

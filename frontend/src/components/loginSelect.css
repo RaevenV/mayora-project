@@ -1,0 +1,35 @@
+.select-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: #1C1C1C;
+}
+
+.img-login {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: fit;
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+.select-card-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.text-login {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+}
