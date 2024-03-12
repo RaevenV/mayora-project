@@ -26,10 +26,9 @@ body {
   flex-direction: column;
 }
 
-
-
 .form-header-text-wrapper {
   width: 85%;
+  padding-right: 30px;
 }
 
 .form-header-text {

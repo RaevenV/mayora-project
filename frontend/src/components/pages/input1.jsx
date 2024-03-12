@@ -1,6 +1,6 @@
 import React from "react";
 import "./input1.css";
-import NextButton from "../nextButton";
+
 import FormInput1 from "../formInput1";
 
 
@@ -17,7 +17,6 @@ function Input1() {
           </div>
 
           <FormInput1/>
-          <NextButton link="/input2" />
         </div>
       </div>
     </>
