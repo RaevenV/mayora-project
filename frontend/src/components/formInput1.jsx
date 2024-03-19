@@ -16,7 +16,7 @@ function FormInput1() {
         <InputTB title="Nomor QT*" />
         <InputTB title="Buyer*" />
       </div>
-      <NextButton link="/input2" />
+      <NextButton text="Next>>" link="/input2" />
     </>
   );
 }

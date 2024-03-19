@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import "./inputTB.css";
+import "./autoTB.css";
 
-function InputTB(props) {
+function AutoTB(props) {
   const [content, setContent] = useState("");
+
   return (
     <>
       <div className="tb-wrapper">
@@ -10,14 +11,10 @@ function InputTB(props) {
           <div className="tb-title">{props.title}</div>
           <div className="tb-sym">:</div>
         </div>
-        <input
-          placeholder = {props.placeholder}
-          type="text"
-          className="tb-input"
-        />
+        <div className="auto-output">test</div>
       </div>
     </>
   );
 }
 
-export default InputTB;
+export default AutoTB;

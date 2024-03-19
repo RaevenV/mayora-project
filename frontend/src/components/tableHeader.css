@@ -1,0 +1,27 @@
+.table-header-container {
+  display: grid;
+  grid-template-columns: 1.5fr 4.5fr 1.2fr 1.8fr 2fr 2.2fr 1.7fr 1.6fr;
+  background-color: #b5b5b5;
+  width: 93%;
+  height: 50px;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.table-header-item {
+  text-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.table-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: 30px;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./inputTB.css";
+import "./outputTB.css";
 
-function InputTB(props) {
+function OutputTB(props) {
   const [content, setContent] = useState("");
   return (
     <>
@@ -10,14 +10,10 @@ function InputTB(props) {
           <div className="tb-title">{props.title}</div>
           <div className="tb-sym">:</div>
         </div>
-        <input
-          placeholder = {props.placeholder}
-          type="text"
-          className="tb-input"
-        />
+        <div className="tb-output"></div>
       </div>
     </>
   );
 }
 
-export default InputTB;
+export default OutputTB;

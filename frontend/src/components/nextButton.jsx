@@ -7,7 +7,7 @@ function NextButton(props) {
     <>
       <div className="next-button-container">
         <Link to={props.link} className="next-button-wrapper">
-          <div className="next-text">Next {">>"}</div>
+          <div className="next-text">{props.text}</div>
         </Link>
       </div>
     </>
