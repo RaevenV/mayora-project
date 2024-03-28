@@ -1,0 +1,101 @@
+html,
+body {
+  margin: 0;
+}
+
+:root {
+  background-color: #E3E3E3;
+  font-family: "Poppins", sans-serif;
+}
+
+.new{
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  overflow-y: auto;
+
+  .body-container {
+    background-color: #E3E3E3;
+    min-height: 100vh;
+    width: 85%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 200px;
+
+    .form-header-wrapper{
+      width: 88%;
+      justify-content: flex-start;
+      margin-top: 30px;
+
+      h1{
+        color: #1C1C1C;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+
+    .form-container{
+      width: 88%;
+      border-radius: 8px;
+      height: auto;
+      margin-bottom: 100px;
+      form{
+        width: 90%;
+        margin: 30px;
+        .form-input{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          font-size: 18px;
+          font-weight: 400;
+          label{
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          input{
+            width: 60%;
+            margin-left: 30px;
+            border: none;
+            border-radius: 8px;
+            height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #E3E3E3;
+          }
+        }
+        .button-wrapper{
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          margin-top: 60px;
+          button{
+            height: 40px;
+            background-color: #f9f9f9;
+            width: 130px;
+            border-radius: 8px;
+            border: 3px #b9b9b9 solid;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 20px;
+            color: #b9b9b9;
+            font-family: "Poppins", sans-serif;
+            transition:#E3E3E3 0.3s ease;
+          }
+
+          button:hover{
+            background-color: #b9b9b9;
+            color: #f9f9f9;
+          }
+        }
+
+      }
+    }
+  }
+}
