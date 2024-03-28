@@ -8,7 +8,8 @@ import ShowData from "./components/pages/showData";
 import ViewDetail from "./components/pages/viewDetail";
 import InputPage from "./pages/inputPage/inputPage"
 import { productInputs } from "./formSource";
-// import { productInputs } from "./formSource";
+import ShowDataQC from "./components/pages/showDataQC";
+import ShowDataPPIC from "./components/pages/showDataPPIC";
 
 function App() {
   return (
@@ -16,15 +17,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Login />} />
-          {/* <Route path="product"> */}
-            <Route path="/inputPage" exact element={<InputPage inputs={productInputs}/>} />
-          {/* </Route> */}
-          {/* <Route path="packaging">
-            <Route path="/inputPage" exact element={<InputPage inputs={packagingInputs}/>} />
-          </Route> */}
-          <Route path="/input1" exact element={<Input1 />} />
-          <Route path="/input1" exact element={<Input1 />} />
-          <Route path="/input2" exact element={<Input2 />} />
+          <Route path="/inputPage" exact element={<InputPage inputs={productInputs}/>} />
+          <Route path="/showdataQC" exact element ={<ShowDataQC/>}/>
+          <Route path="/showdataPPIC" exact element ={<ShowDataPPIC/>}/>
           <Route path="/showdata" exact element={<ShowData />} />
           <Route path="/viewdetail" exact element={<ViewDetail />} />
         </Routes>
