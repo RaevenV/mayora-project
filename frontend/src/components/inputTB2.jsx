@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./inputTB2.css";
 
-function InputTB(props) {
+function InputTB2(props) {
   const [content, setContent] = useState("");
   return (
     <>
@@ -28,4 +28,4 @@ function InputTB(props) {
   );
 }
 
-export default InputTB;
+export default InputTB2;

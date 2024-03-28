@@ -10,7 +10,8 @@
 
 .dataListItem-wrapper {
   background-color: #E0E0E0;
-  width: 93%;
+  width: 93.5%;
+  margin-right: 15px;
   height: 50px;
   border-radius: 8px;
   display: grid;

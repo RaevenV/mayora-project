@@ -13,8 +13,8 @@ function Login() {
           </div>
           <div className="select-wrapper">
             <LoginSelect src="images/PROD.png" text="Production" link ="/input1" />
-            <LoginSelect src="images/QC.png" text="QC" />
-            <LoginSelect src="images/PPIC.png" text="PPIC" />
+            <LoginSelect src="images/QC.png" text="QC" link="/showdataQC"/>
+            <LoginSelect src="images/PPIC.png" text="PPIC" link="showdataPPIC" />
           </div>
         </div>
       </div>
