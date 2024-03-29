@@ -2,6 +2,7 @@ import React from "react";
 import "./viewDetail.css";
 import FormOutput2 from "../formOutput2";
 import FormOutput from "../formOutput";
+import { useLocation } from "react-router-dom";
 
 function ViewDetail() {
   return (
@@ -21,6 +22,7 @@ function ViewDetail() {
               <div className="view-title-text1">PRIMARY PACKAGING</div>
             </div>
           </div>
+
           <FormOutput2 />
         </div>
       </div>

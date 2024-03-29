@@ -3,6 +3,7 @@ import "./formInput1.css";
 import AutoOutputTB from "./autoOutputTB.jsx";
 
 
+
 function FormOutput() {
   return (
     <>

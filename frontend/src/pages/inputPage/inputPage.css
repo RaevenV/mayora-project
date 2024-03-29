@@ -4,47 +4,48 @@ body {
 }
 
 :root {
-  background-color: #E3E3E3;
+  background-color: #e3e3e3;
   font-family: "Poppins", sans-serif;
 }
 
-.new{
+.new {
   width: 100%;
   display: flex;
   min-height: 100vh;
   overflow-y: auto;
 
   .body-container {
-    background-color: #E3E3E3;
+    background-color: #e3e3e3;
     min-height: 100vh;
     width: 85%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-left: 200px;
+    margin-left: 220px;
 
-    .form-header-wrapper{
+    .form-header-wrapper {
       width: 88%;
       justify-content: flex-start;
       margin-top: 30px;
 
-      h1{
-        color: #1C1C1C;
+      h1 {
+        color: #1c1c1c;
         font-size: 30px;
         font-weight: 700;
       }
     }
 
-    .form-container{
+    .form-container4 {
       width: 88%;
       border-radius: 8px;
       height: auto;
       margin-bottom: 100px;
-      form{
+      background-color: #f9f9f9;
+      form {
         width: 90%;
         margin: 30px;
-        .form-input{
+        .form-input {
           width: 100%;
           display: flex;
           flex-direction: row;
@@ -52,13 +53,13 @@ body {
           margin-bottom: 30px;
           font-size: 18px;
           font-weight: 400;
-          label{
+          label {
             width: 320px;
             display: flex;
             flex-direction: column;
             justify-content: center;
           }
-          input{
+          input {
             width: 60%;
             margin-left: 30px;
             border: none;
@@ -66,15 +67,15 @@ body {
             height: 40px;
             padding-left: 10px;
             padding-right: 10px;
-            background-color: #E3E3E3;
+            background-color: #e3e3e3;
           }
         }
-        .button-wrapper{
+        .button-wrapper {
           display: flex;
           justify-content: flex-end;
           align-items: flex-end;
           margin-top: 60px;
-          button{
+          button {
             height: 40px;
             background-color: #f9f9f9;
             width: 130px;
@@ -86,15 +87,14 @@ body {
             font-size: 20px;
             color: #b9b9b9;
             font-family: "Poppins", sans-serif;
-            transition:#E3E3E3 0.3s ease;
+            transition: #e3e3e3 0.3s ease;
           }
 
-          button:hover{
+          button:hover {
             background-color: #b9b9b9;
             color: #f9f9f9;
           }
         }
-
       }
     }
   }

@@ -8,7 +8,7 @@ function NavProd(){
         <div className="nav-container">
           <div className="nav-wrapper">
             <img className="prod-img" src="images/PROD.png" alt="" />
-            <Link className="prod-link" to="/input1">
+            <Link className="prod-link" to="/inputPage">
               <h4 className="prod-text">Input Data</h4>
             </Link>
             <Link className="prod-link2" to="/showdata">

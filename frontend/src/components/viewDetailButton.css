@@ -1,0 +1,27 @@
+.detailButton-wrapper {
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1c1c1c;
+  border-radius: 4px;
+  border: 1px solid #1c1c1c;
+  height: 35px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: wrap;
+}
+
+.detailButtonContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #e3e3e3;
+  align-items: center;
+  text-wrap: wrap;
+}
+
+.detailButton-wrapper:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}

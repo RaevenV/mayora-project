@@ -12,7 +12,6 @@ function useFormInput(){
   
   const onSubmitForm = async (e) => {
     e.preventDefault()
-    console.log('icel', data)
     try{
       const counterDocRef = doc(db, "counters", "productCounter");
       const counterDocSnap = await getDoc(counterDocRef);

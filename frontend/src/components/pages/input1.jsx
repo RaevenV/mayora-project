@@ -10,7 +10,7 @@ function Input1() {
   return (
     <>
       <div className="background-container">
-        <NavProd/>
+        <NavProd />
         <div className="form-container">
           <div className="form-header-text-wrapper">
             <div className="form-header-text">
@@ -18,7 +18,7 @@ function Input1() {
             </div>
           </div>
 
-          <FormInput1/>
+          <FormInput1 />
         </div>
       </div>
     </>

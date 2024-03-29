@@ -2,6 +2,7 @@ import React from "react";
 import "./showData.css";
 import DataListContainer from "../dataListContainer";
 import TableHeader from "../tableHeader";
+import "./input2.css";
 
 function ShowData(props) {
   return (

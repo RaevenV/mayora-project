@@ -3,18 +3,19 @@ import "./inputPage.css";
 import useFormInput from "../../hooks/useFormInput";
 import NavProd from "../../components2/navProduction";
 
-function InputPage({inputs}){
-  const { data, handleChangeData, onSubmitForm, productInputs } = useFormInput()
+function InputPage({ inputs }) {
+  const { data, handleChangeData, onSubmitForm, productInputs } =
+    useFormInput();
 
   return (
     <div className="new">
-      <NavProd/>
+      <NavProd />
       {/* <div className="sidebar"></div> */}
       <div className="body-container">
         <div className="form-header-wrapper">
           <h1>PRODUCT INPUT</h1>
         </div>
-        <div className="form-container">
+        <div className="form-container4">
           <form>
             {inputs?.map((input) => (
               <div className="form-input" key={input.id}>
@@ -36,7 +37,7 @@ function InputPage({inputs}){
         <div className="footer"></div>
       </div>
     </div>
-  )
+  );
 }
 
 export default InputPage;
