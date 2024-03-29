@@ -3,10 +3,12 @@ import "./viewDetail.css";
 import FormOutput2 from "../formOutput2";
 import FormOutput from "../formOutput";
 import { useLocation } from "react-router-dom";
+import NavQC from "../navQC";
 
 function ViewDetail() {
   return (
-    <div className="background-container3">
+    <div className="background">
+      <NavQC imgsrc="images/QC.png"/>
       <div className="viewDetail-container">
         <div className="viewDetail-wrapper">
           <div className="view-title-container1">

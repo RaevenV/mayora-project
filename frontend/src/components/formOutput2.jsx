@@ -13,7 +13,7 @@ function FormOutput2() {
         <OutputTB2 title="Print Coding" />
         <AutoOutputTB title="Kodifikasi" />
       </div>
-      <NextButton text="<<Back" link="/showData" />
+      <NextButton text="<<Back" link="/showDataQC" />
     </>
   );
 }

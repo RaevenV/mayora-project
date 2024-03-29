@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { db } from "../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import "./viewDetailButton.css";
@@ -22,18 +23,24 @@ function ViewDetailButton(props) {
 //     fetchData();
 //   }, [props.searchParam]);
 
+// const history = useHistory();
+
+const handleClick = () => {
+  const viewDetailLink = "./viewDetail/" + props.searchParam;
+  // history.push(viewDetailLink);
+};
   return (
     <>
       <div className="detailButtonContainer">
-        <Link
-          to={{
-            pathname: "/viewdetail",
-            
-          }}
+        {/* <Link
+          to={viewDetailLink}
           className="detailButton-wrapper"
         >
           View Detail
-        </Link>
+        </Link> */}
+        <button onClick={handleClick} className="detailButton-wrapper">
+          View Detail
+        </button>
       </div>
     </>
   );
