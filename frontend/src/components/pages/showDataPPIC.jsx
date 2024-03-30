@@ -7,7 +7,7 @@ import NavQC from "../navQC";
 function ShowDataPPIC(props) {
   return (
     <>
-      <div className="background-container2">
+      <div className="background">
         <NavQC imgsrc="images/PPIC.png" />
         <div className="showData-container">
           <div className="showData-text-container">

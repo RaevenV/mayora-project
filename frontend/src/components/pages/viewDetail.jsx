@@ -4,12 +4,13 @@ import FormOutput2 from "../formOutput2";
 import FormOutput from "../formOutput";
 import NavQC from "../navQC";
 import { useParams } from "react-router-dom"; 
+import NavProd from "../../components2/navProduction";
 function ViewDetail() {
   const { searchParam } = useParams(); // Extract searchParam from the route
 
   return (
     <div className="background">
-      {/* <NavQC imgsrc="images/QC.png" /> */}
+      <NavQC imgsrc="images/QC.png"/>
       <div className="viewDetail-container">
         <div className="viewDetail-wrapper">
           <div className="view-title-container1">

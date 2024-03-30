@@ -3,11 +3,13 @@ import "./showData.css";
 import DataListContainer from "../dataListContainer";
 import TableHeader from "../tableHeader";
 import "./input2.css";
+import NavProd from "../../components2/navProduction";
 
 function ShowData(props) {
   return (
     <>
-      <div className="background-container2">
+      <div className="background">
+        <NavProd/>
         <div className="showData-container">
           <div className="showData-text-container">
             <div className="showData-text-wrapper">

@@ -16,12 +16,16 @@
 .detailButtonContainer {
   display: flex;
   justify-content: center;
-  background-color: #e3e3e3;
+  background-color: #e0e0e0;
   align-items: center;
   text-wrap: wrap;
 }
 
+.detailButton-wrapper {
+  background-color: #f9f9f9;
+}
 .detailButton-wrapper:hover {
   background-color: #f9f9f9;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }

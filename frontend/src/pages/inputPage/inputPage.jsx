@@ -10,7 +10,6 @@ function InputPage({ inputs }) {
   return (
     <div className="new">
       <NavProd />
-      {/* <div className="sidebar"></div> */}
       <div className="body-container">
         <div className="form-header-wrapper">
           <h1>PRODUCT INPUT</h1>
