@@ -2,7 +2,7 @@ import React from "react";
 import "./input1.css";
 
 import FormInput1 from "../formInput1";
-import NavProd from "../navProduction";
+import NavProd from "../../components2/navbar/navProduction";
 
 
 

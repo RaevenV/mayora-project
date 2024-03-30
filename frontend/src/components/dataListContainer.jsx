@@ -3,7 +3,7 @@ import "./dataListContainer.css";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import ViewDetailButton from "./viewDetailButton";
-import ViewDetail from "./pages/viewDetail";
+import ViewDetail from "../pages/viewDetail/viewDetail";
 import { useNavigate } from "react-router-dom";
 
 function DataListContainer() {

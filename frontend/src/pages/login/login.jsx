@@ -1,5 +1,5 @@
 import React from "react";
-import LoginSelect from "../loginSelect";
+import LoginSelect from "../../components/loginSelect";
 import "./login.css";
 
 

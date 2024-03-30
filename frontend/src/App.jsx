@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/pages/login";
-import ShowData from "./components/pages/showData";
-import ViewDetail from "./components/pages/viewDetail";
+import Login from "./pages/login/login";
+import ShowData from "./pages/showData/showData";
+import ViewDetail from "./pages/viewDetail/viewDetail";
 import InputPage from "./pages/inputPage/inputPage";
 import { productInputs } from "./formSource";
-import ShowDataQC from "./components/pages/showDataQC";
-import ShowDataPPIC from "./components/pages/showDataPPIC";
+import ShowDataQC from "./pages/showData/showDataQC";
+import ShowDataPPIC from "./pages/showData/showDataPPIC";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./inputPage.css";
 import useFormInput from "../../hooks/useFormInput";
-import NavProd from "../../components2/navProduction";
+import NavProd from "../../components2/navbar/navProduction";
 
 function InputPage({ inputs }) {
   const { data, handleChangeData, onSubmitForm, productInputs } =
@@ -12,7 +12,7 @@ function InputPage({ inputs }) {
       <NavProd />
       <div className="body-container">
         <div className="form-header-wrapper">
-          <h1>PRODUCT INPUT</h1>
+          <h1>FORM MOCKUP KODIFIKASI EKSPOR</h1>
         </div>
         <div className="form-container4">
           <form>

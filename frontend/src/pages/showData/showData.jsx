@@ -1,14 +1,14 @@
 import React from "react";
 import "./showData.css";
-import DataListContainer from "../dataListContainer";
-import TableHeader from "../tableHeader";
-import NavQC from "../navQC";
+import DataListContainer from "../../components/dataListContainer";
+import TableHeader from "../../components/tableHeader";
+import NavProd from "../../components2/navbar/navProduction";
 
-function ShowDataQC(props) {
+function ShowData(props) {
   return (
     <>
       <div className="background">
-        <NavQC imgsrc="images/QC.png"/>
+        <NavProd/>
         <div className="showData-container">
           <div className="showData-text-container">
             <div className="showData-text-wrapper">
@@ -24,4 +24,4 @@ function ShowDataQC(props) {
   );
 }
 
-export default ShowDataQC;
+export default ShowData;

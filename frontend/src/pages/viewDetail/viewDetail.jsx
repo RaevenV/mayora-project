@@ -1,10 +1,10 @@
 import React from "react";
 import "./viewDetail.css";
-import FormOutput2 from "../formOutput2";
-import FormOutput from "../formOutput";
-import NavQC from "../navQC";
+import FormOutput2 from "../../components/formOutput2";
+import FormOutput from "../../components/formOutput";
+import NavQC from "../../components2/navbar/navQC";
 import { useParams } from "react-router-dom"; 
-import NavProd from "../../components2/navProduction";
+
 function ViewDetail() {
   const { searchParam } = useParams(); // Extract searchParam from the route
 
