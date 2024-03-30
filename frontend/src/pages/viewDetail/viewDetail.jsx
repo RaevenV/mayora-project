@@ -6,7 +6,7 @@ import NavQC from "../../components2/navbar/navQC";
 import { useParams } from "react-router-dom"; 
 
 function ViewDetail() {
-  const { searchParam } = useParams(); // Extract searchParam from the route
+  const { searchParam } = useParams();
 
   return (
     <div className="background">

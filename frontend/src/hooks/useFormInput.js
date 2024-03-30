@@ -1,18 +1,26 @@
-import { useEffect, useState } from "react"
-import {productInputs} from '../formSource'
-import { collection, doc, getDoc, getDocs, query, setDoc, where } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { productInputs } from "../formSource";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  setDoc,
+  where,
+} from "firebase/firestore";
 import { db } from "../firebase";
 
-function useFormInput(){
-  const [data, setData] = useState({})
+function useFormInput() {
+  const [data, setData] = useState({});
 
   function handleChangeData(id, value) {
-    setData({...data, [id]: value})
+    setData({ ...data, [id]: value });
   }
-  
+
   const onSubmitForm = async (e) => {
-    e.preventDefault()
-    try{
+    e.preventDefault();
+    try {
       const counterDocRef = doc(db, "counters", "productCounter");
       const counterDocSnap = await getDoc(counterDocRef);
       let counter = 1;
@@ -20,17 +28,17 @@ function useFormInput(){
         const { value } = counterDocSnap.data();
         counter = value >= 1 && value <= 10 ? value + 1 : 1;
       }
-  
+
       const customId = `SP${counter}`;
       await setDoc(counterDocRef, { value: counter });
-      await setDoc(doc(db, "submittedProduct", customId),{
-        ...data
+      await setDoc(doc(db, "submittedProduct", customId), {
+        ...data,
+        approval: false,
       });
-    }catch(err){
+    } catch (err) {
       console.log(err);
     }
-  }
-
+  };
 
   const SKUval = data["sku"];
   useEffect(() => {
@@ -46,14 +54,12 @@ function useFormInput(){
     fetchData();
   }, [SKUval]);
 
-
-  
   return {
     data,
     handleChangeData,
     onSubmitForm,
-    productInputs
-  }
+    productInputs,
+  };
 }
 
-export default useFormInput
+export default useFormInput;

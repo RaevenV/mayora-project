@@ -1,29 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "./dataListContainer.css";
 import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
 import ViewDetailButton from "./viewDetailButton";
-import ViewDetail from "../pages/viewDetail/viewDetail";
 import { useNavigate } from "react-router-dom";
 
 function DataListContainer() {
-  const [approval, setApproval] = useState(false);
   const [dataList, setDataList] = useState([]);
   const navigate = useNavigate();
-
-  function handleApproval() {
-    if (approval) {
-      setApproval(false);
-    } else {
-      setApproval(true);
-    }
-  }
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "submittedProduct"));
-        const data = querySnapshot.docs.map((doc) => doc.data());
+        const data = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
         setDataList(data);
         if (data.length === 0) {
           console.log("No data fetched from Firestore");
@@ -38,6 +31,25 @@ function DataListContainer() {
 
   const handleViewDetail = (searchParam) => {
     navigate(`/viewdetail/${searchParam}`);
+  };
+
+  const handleApprovalToggle = async (id, currentApproval) => {
+    try {
+      await updateDoc(doc(db, "submittedProduct", id), {
+        approval: !currentApproval,
+      });
+      console.log("Approval toggled successfully!");
+      setDataList((prevDataList) =>
+        prevDataList.map((item) => {
+          if (item.id === id) {
+            return { ...item, approval: !currentApproval };
+          }
+          return item;
+        })
+      );
+    } catch (error) {
+      console.error("Error toggling approval: ", error);
+    }
   };
 
   return (
@@ -55,7 +67,14 @@ function DataListContainer() {
               searchParam={item.SKU}
               onViewDetail={handleViewDetail}
             />
-            <div className="dataList-item">Approve</div>
+            <div className="dataList-item2">
+              <button
+                className="approval-button"
+                onClick={() => handleApprovalToggle(item.id, item.approval)}
+              >
+                {item.approval ? "Cancel" : "Approve"}
+              </button>
+            </div>
           </div>
         </div>
       ))}

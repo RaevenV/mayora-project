@@ -25,7 +25,7 @@
   background-color: #f9f9f9;
 }
 .detailButton-wrapper:hover {
-  background-color: #f9f9f9;
+  background-color: #B5B5B5;
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
