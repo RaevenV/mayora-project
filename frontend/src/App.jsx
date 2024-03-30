@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/pages/login";
 import ShowData from "./components/pages/showData";
 import ViewDetail from "./components/pages/viewDetail";
-import InputPage from "./pages/inputPage/inputPage"
+import InputPage from "./pages/inputPage/inputPage";
 import { productInputs } from "./formSource";
 import ShowDataQC from "./components/pages/showDataQC";
 import ShowDataPPIC from "./components/pages/showDataPPIC";
@@ -15,11 +15,19 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Login />} />
-          <Route path="/inputPage" exact element={<InputPage inputs={productInputs}/>} />
-          <Route path="/showdataQC" exact element ={<ShowDataQC/>}/>
-          <Route path="/showdataPPIC" exact element ={<ShowDataPPIC/>}/>
+          <Route
+            path="/inputPage"
+            exact
+            element={<InputPage inputs={productInputs} />}
+          />
+          <Route path="/showdataQC" exact element={<ShowDataQC />} />
+          <Route path="/showdataPPIC" exact element={<ShowDataPPIC />} />
           <Route path="/showdata" exact element={<ShowData />} />
-          <Route path="/viewdetail" exact element={<ViewDetail />} />
+          <Route
+            path="/viewDetail/:searchParam"
+            exact
+            element={<ViewDetail />}
+          />
         </Routes>
       </Router>
     </>

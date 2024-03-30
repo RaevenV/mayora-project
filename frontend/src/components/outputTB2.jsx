@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./outputTB2.css";
 
 function OutputTB2(props) {
   const [content, setContent] = useState("");

@@ -1,11 +1,31 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
-import { db } from "../firebase";
-import { collection, query, where, getDocs } from "firebase/firestore";
+// import { db } from "../firebase";
+// import { collection, query, where, getDocs } from "firebase/firestore";
 import "./viewDetailButton.css";
 
 function ViewDetailButton(props) {
+
+
+  const handleClick = () => {
+    props.onViewDetail(props.searchParam);
+  };
+
+  return (
+    <div className="detailButtonContainer">
+      <button onClick={handleClick} className="detailButton-wrapper">
+        View Detail
+      </button>
+    </div>
+  );
+}
+
+export default ViewDetailButton;
+
+
+
+
 //   const [searchData, setSearchData] = useState({});
 //   useEffect(() => {
 //     const fetchData = async () => {
@@ -25,25 +45,14 @@ function ViewDetailButton(props) {
 
 // const history = useHistory();
 
-const handleClick = () => {
-  const viewDetailLink = "./viewDetail/" + props.searchParam;
   // history.push(viewDetailLink);
-};
-  return (
-    <>
-      <div className="detailButtonContainer">
-        {/* <Link
+
+
+  {
+    /* <Link
           to={viewDetailLink}
           className="detailButton-wrapper"
         >
           View Detail
-        </Link> */}
-        <button onClick={handleClick} className="detailButton-wrapper">
-          View Detail
-        </button>
-      </div>
-    </>
-  );
-}
-
-export default ViewDetailButton;
+        </Link> */
+  }

@@ -22,7 +22,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin-left: 220px;
+    margin-left: 250px;
 
     .form-header-wrapper {
       width: 88%;

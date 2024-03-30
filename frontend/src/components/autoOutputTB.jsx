@@ -11,7 +11,7 @@ function AutoTB(props) {
           <div className="tb-title">{props.title}</div>
           <div className="tb-sym">:</div>
         </div>
-        <div className="auto-output">test</div>
+        <div className="auto-output">{props.value}</div>
       </div>
     </>
   );
