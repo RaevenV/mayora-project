@@ -33,7 +33,8 @@ function useFormInput() {
       await setDoc(counterDocRef, { value: counter });
       await setDoc(doc(db, "submittedProduct", customId), {
         ...data,
-        approval: false,
+        approvalQC: false,
+        approvalPPIC: false,
       });
     } catch (err) {
       console.log(err);

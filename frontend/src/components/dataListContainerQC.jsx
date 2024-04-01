@@ -5,7 +5,7 @@ import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
 import ViewDetailButton from "./viewDetailButton";
 import { useNavigate } from "react-router-dom";
 
-function DataListContainer() {
+function DataListContainerQC() {
   const [dataList, setDataList] = useState([]);
   const navigate = useNavigate();
 
@@ -33,6 +33,25 @@ function DataListContainer() {
     navigate(`/viewdetail/${searchParam}`);
   };
 
+  const handleApprovalToggle = async (id, currentApproval) => {
+    try {
+      await updateDoc(doc(db, "submittedProduct", id), {
+        approvalQC: !currentApproval,
+      });
+      console.log("Approval toggled successfully!");
+      setDataList((prevDataList) =>
+        prevDataList.map((item) => {
+          if (item.id === id) {
+            return { ...item, approvalQC: !currentApproval };
+          }
+          return item;
+        })
+      );
+    } catch (error) {
+      console.error("Error toggling approval: ", error);
+    }
+  };
+
   return (
     <div className="data-list-container">
       {dataList.map((item, index) => (
@@ -48,24 +67,13 @@ function DataListContainer() {
               searchParam={item.SKU}
               onViewDetail={handleViewDetail}
             />
-            <div className="dataList-item3">
-              {item.approvalQC && item.approvalPPIC ? (
-                <span>Approved</span>
-              ) : (
-                <>
-                  {!item.approvalPPIC && !item.approvalQC && (
-                    <span className="approval-status">Needs Approval</span>
-                  )}
-                  {!item.approvalPPIC && item.approvalQC && (
-                    <span className="approval-status2">
-                      Needs PPIC approval
-                    </span>
-                  )}
-                  {item.approvalPPIC && !item.approvalQC && (
-                    <span className="approval-status2">Needs QC approval</span>
-                  )}
-                </>
-              )}
+            <div className="dataList-item2">
+              <button
+                className="approval-button"
+                onClick={() => handleApprovalToggle(item.id, item.approvalQC)}
+              >
+                {item.approvalQC ? "Cancel" : "Approve"}
+              </button>
             </div>
           </div>
         </div>
@@ -74,4 +82,4 @@ function DataListContainer() {
   );
 }
 
-export default DataListContainer;
+export default DataListContainerQC;

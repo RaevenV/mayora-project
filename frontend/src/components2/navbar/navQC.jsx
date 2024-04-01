@@ -9,7 +9,7 @@ function NavQC(props) {
         <div className="nav-wrapper">
           <img className="prod-img" src={props.imgsrc} alt="" />
           <div className="role">{props.role}</div>
-          <Link className="prod-link2" to="/showdata">
+          <Link className="prod-link2" to={props.link}>
             <h4 className="prod-text">View Data</h4>
           </Link>
           <Link className="prod-link2" to="/">
