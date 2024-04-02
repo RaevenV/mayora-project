@@ -5,7 +5,7 @@ import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
 import ViewDetailButton from "./viewDetailButton";
 import { useNavigate } from "react-router-dom";
 
-function DataListContainerQC() {
+function DataListContainerSHQC() {
   const [dataList, setDataList] = useState([]);
   const navigate = useNavigate();
 
@@ -36,13 +36,13 @@ function DataListContainerQC() {
   const handleApprovalToggle = async (id, currentApproval) => {
     try {
       await updateDoc(doc(db, "submittedProduct", id), {
-        approvalQC: !currentApproval,
+        approvalSHQC: !currentApproval,
       });
       console.log("Approval toggled successfully!");
       setDataList((prevDataList) =>
         prevDataList.map((item) => {
           if (item.id === id) {
-            return { ...item, approvalQC: !currentApproval };
+            return { ...item, approvalSHQC: !currentApproval };
           }
           return item;
         })
@@ -70,9 +70,9 @@ function DataListContainerQC() {
             <div className="dataList-item2">
               <button
                 className="approval-button"
-                onClick={() => handleApprovalToggle(item.id, item.approvalQC)}
+                onClick={() => handleApprovalToggle(item.id, item.approvalSHQC)}
               >
-                {item.approvalQC ? "Cancel" : "Approve"}
+                {item.approvalSHQC ? "Cancel" : "Approve"}
               </button>
             </div>
           </div>
@@ -82,4 +82,4 @@ function DataListContainerQC() {
   );
 }
 
-export default DataListContainerQC;
+export default DataListContainerSHQC;

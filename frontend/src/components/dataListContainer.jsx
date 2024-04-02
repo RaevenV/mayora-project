@@ -49,21 +49,57 @@ function DataListContainer() {
               onViewDetail={handleViewDetail}
             />
             <div className="dataList-item3">
-              {item.approvalQC && item.approvalPPIC ? (
+              {item.approvalPPIC && item.approvalUHQC && item.approvalSHQC ? (
                 <span>Approved</span>
               ) : (
                 <>
-                  {!item.approvalPPIC && !item.approvalQC && (
-                    <span className="approval-status">Needs Approval</span>
-                  )}
-                  {!item.approvalPPIC && item.approvalQC && (
-                    <span className="approval-status2">
-                      Needs PPIC approval
-                    </span>
-                  )}
-                  {item.approvalPPIC && !item.approvalQC && (
-                    <span className="approval-status2">Needs QC approval</span>
-                  )}
+                  {!item.approvalPPIC &&
+                    !item.approvalUHQC &&
+                    !item.approvalSHQC && (
+                      <span className="approval-status">Needs Approval</span>
+                    )}
+                  {!item.approvalPPIC &&
+                    item.approvalUHQC &&
+                    item.approvalSHQC && (
+                      <span className="approval-status2">
+                        Needs PPIC approval
+                      </span>
+                    )}
+                  {item.approvalPPIC &&
+                    !item.approvalUHQC &&
+                    item.approvalSHQC && (
+                      <span className="approval-status2">
+                        Needs UHQC approval
+                      </span>
+                    )}
+                  {item.approvalPPIC &&
+                    item.approvalUHQC &&
+                    !item.approvalSHQC && (
+                      <span className="approval-status2">
+                        Needs SHQC approval
+                      </span>
+                    )}
+                  {item.approvalPPIC &&
+                    !item.approvalUHQC &&
+                    !item.approvalSHQC && (
+                      <span className="approval-status2">
+                        Needs UHQC & SHQC approval
+                      </span>
+                    )}
+                  {!item.approvalPPIC &&
+                    !item.approvalUHQC &&
+                    item.approvalSHQC && (
+                      <span className="approval-status2">
+                        Needs UHQC & PPIC approval
+                      </span>
+                    )}
+                  {!item.approvalPPIC &&
+                    item.approvalUHQC &&
+                    !item.approvalSHQC && (
+                      <span className="approval-status2">
+                        Needs PPIC & SHQC approval
+                      </span>
+                    )}
                 </>
               )}
             </div>
