@@ -35,6 +35,10 @@ function FormOutput2(props) {
         {[
           "packSKU1",
           "packType1",
+          "packSKU2",
+          "packType2",
+          "packSKU3",
+          "packType3",
           "printCode1",
           "printCode2",
           "kodifikasi",

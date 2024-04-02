@@ -20,10 +20,9 @@ function ViewDetail() {
           </div>
 
           <FormOutput searchParam={searchParam} />
-
           <div className="view-title-container1">
             <div className="view-title-wrapper1">
-              <div className="view-title-text1">PRIMARY PACKAGING</div>
+              <div className="view-title-text1">PACKAGING</div>
             </div>
           </div>
           <FormOutput2 searchParam={searchParam} />
