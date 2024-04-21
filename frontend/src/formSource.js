@@ -95,6 +95,12 @@ export const productInputs = [
     type: "text",
     placeholder: "",
   },
+  {
+    id: "notes",
+    label: "Notes",
+    type: "text",
+    placeholder: ""
+  }
 ];
 
 /*export const packagingInputs = [

@@ -42,6 +42,7 @@ function FormOutput2(props) {
           "printCode1",
           "printCode2",
           "kodifikasi",
+          "notes"
         ].map((key, index) => (
           <AutoOutputTB
             key={index}
